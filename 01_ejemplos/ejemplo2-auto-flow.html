@@ -27,6 +27,17 @@
     grid-auto-rows: 100px;
     grid-gap: 15px;
     height: 400px;
+    margin-bottom: 50px;
+}
+
+.container3 {
+    display: grid;
+    border: 1px solid var(--yellow);
+    grid-template-columns: 100px 200px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
+    grid-gap: 15px;
+    padding: 5px;
 }
 </style>
 
@@ -45,17 +56,31 @@
     </div>
 
     <div class="container2">
-            <div class="item">Auto, se ajusta al contenido</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item">4</div>
-            <div class="item">5</div>
-            <div class="item">6</div>
-            <div class="item">7</div>
-            <div class="item">8</div>
-            <div class="item">9</div>
-            <div class="item">10</div>
-        </div>
+        <div class="item">Auto, se ajusta al contenido</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+
+    <div class="container3">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+
 </body>
 
 </html>
