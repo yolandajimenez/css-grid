@@ -50,6 +50,13 @@
   h6 {
     margin: 0 0 5px 0;
   }
+
+  h2 {
+    margin: 10px 0 10px;
+    padding: 8px;
+    background-color:  white;
+}
+
   /* Each item in our grid will contain numbers */
   .item {
     /* We center the contents of these items. You can also do this with flexbox too! */
