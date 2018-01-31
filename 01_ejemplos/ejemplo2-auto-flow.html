@@ -9,11 +9,17 @@
 </head>
 <style>
 
+
+h2 {
+    margin: 10px 0 10px;
+    padding: 8px;
+    background-color:  white;
+}
 .container {
     display: grid;
     border: 1px solid var(--yellow);
     grid-template-columns: 100px 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 100px;
     grid-auto-rows: 100px;
     grid-gap: 20px;
     margin-bottom: 50px;
@@ -23,8 +29,8 @@
     display: grid;
     border: 1px solid var(--yellow);
     grid-template-columns: auto 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-auto-rows: 100px;
+    grid-template-rows: 100px;
+    grid-auto-rows: 200px;
     grid-gap: 15px;
     height: 400px;
     margin-bottom: 50px;
@@ -36,6 +42,14 @@
     grid-template-columns: 100px 200px;
     grid-auto-flow: column;
     grid-auto-columns: 100px;
+    grid-gap: 15px;
+    padding: 5px;
+}
+
+.container4 {
+    display: grid;
+    border: 1px solid var(--yellow);
+    grid-template-columns: repeat(4, 1fr) 300px;
     grid-gap: 15px;
     padding: 5px;
 }
@@ -55,6 +69,7 @@
         <div class="item">10</div>
     </div>
 
+    <h2>Height: 400px + auto-row</h2>
     <div class="container2">
         <div class="item">Auto, se ajusta al contenido</div>
         <div class="item">2</div>
@@ -67,7 +82,8 @@
         <div class="item">9</div>
         <div class="item">10</div>
     </div>
-
+    
+    <h2>Auto-Flow: column</h2>
     <div class="container3">
         <div class="item">1</div>
         <div class="item">2</div>
@@ -81,6 +97,19 @@
         <div class="item">10</div>
     </div>
 
+    <h2>Repeat</h2>
+    <div class="container4">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
 </body>
 
 </html>
