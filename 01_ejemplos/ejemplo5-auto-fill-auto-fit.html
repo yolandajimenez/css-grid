@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Auto-fill / Auto-fit</title>
+</head>
+
+<style>
+.container {
+    display: grid;
+    grid-gap: 15px;
+    border: 5px solid var(--yellow);
+    margin-bottom: 10px;
+}
+
+.ejemplo_autofill{
+    grid-template-columns: repeat(auto-fill, 150px);
+}
+
+.ejemplo_autofit{
+    grid-template-columns: repeat(auto-fit, 150px);
+}
+
+.item4{
+    grid-column: auto / -1;
+}
+
+</style>
+
+<body>
+    <h2>Auto-fill</h2>
+    <div class="container ejemplo_autofill">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+    </div>
+
+    <div class="container ejemplo_autofill">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+    </div>
+      
+    <h2>Auto-fit</h2>
+    <div class="container ejemplo_autofit">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+    </div>
+
+    <div class="container ejemplo_autofit">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+    </div>
+
+</body>
+
+</html>
