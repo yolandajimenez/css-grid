@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Grid Template Areas</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">
+      <p>I'm Sidebar #1</p>
+    </div>
+    <div class="item item2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+      <p>Lorem ipsum d</p>
+    </div>
+    <div class="item item3">
+      <p>I'm Sidebar #2</p>
+    </div>
+    <div class="item footer">
+      <p>I'm the footer</p>
+    </div>
+  </div>
+
+  <h2>Colocación con grid-area start and end</h2>
+  <div class="container2">
+      <div class="item prueba1">1</div>
+      <div class="item">2</div>
+      <div class="item prueba3">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item prueba9">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+      <div class="item">13</div>
+      <div class="item">14</div>
+      <div class="item">15</div>
+      <div class="item">16</div>
+      <div class="item">17</div>
+      <div class="item">18</div>
+  </div> 
+  <style>
+    
+    .container {
+      display: grid;
+      margin-bottom: 10px;
+      grid-gap: 20px;
+      grid-template-columns: 2fr 10fr 2fr;
+      grid-template-rows: 200px 150px 150px;
+      grid-template-areas: 
+            "sidebar-1 content sidebar-2"
+            "sidebar-1 content sidebar-2"
+            "footer footer footer"
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .item1 {
+        grid-area: sidebar-1;
+    }
+
+    .item2 {
+        grid-area: content;
+    }
+
+    .item3 {
+        grid-area: sidebar-2;
+    }
+
+    .container2 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+         "izq izq izq dcha dcha dcha"
+         "izq izq izq dcha dcha dcha"
+         "izq izq izq dcha dcha dcha"
+         "izq izq izq dcha dcha dcha"
+         "izq izq izq dcha dcha dcha"
+    }
+
+    .prueba1 {
+        grid-column: izq-start / dcha-end;
+    }
+    .prueba3 {
+        /* grid-area: izq; */
+        grid-column: izq-start / izq-end;
+    }
+
+    .prueba9 {
+        grid-column: 3 / 5;
+    }
+
+    @media (max-width: 700px) {
+        .container {
+            grid-template-areas: 
+                "content content content"
+                "sidebar-1 sidebar-2 ."
+                "footer footer footer"
+        }
+    };
+  </style>
+</body>
+
+</html>
