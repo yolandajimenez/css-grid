@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Auto-fill / Auto-fit</title>
+</head>
+
+<style>
+.container {
+    display: grid;
+    grid-gap: 15px;
+    border: 5px solid var(--yellow);
+    margin-bottom: 10px;
+}
+
+.ejemplo_autofill {
+    grid-template-columns: repeat(auto-fill, 150px);
+}
+
+.ejemplo_autofill_minmax {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.ejemplo_autofit {
+    grid-template-columns: repeat(auto-fit, 150px);
+    /* grid-template-columns: fit-content(100px) 150px 150px; */
+}
+
+.ejemplo_autofit_minmax {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+
+</style>
+
+<body>
+    <h2>Auto-fill</h2>
+    <div class="container ejemplo_autofill">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">Hola autoFill</div>
+    </div>
+    <h2>Auto-fill con minmax</h2>
+    <div class="container ejemplo_autofill_minmax">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">Hola autoFill</div>
+    </div>
+      
+    <h2>Auto-fit</h2>
+    <div class="container ejemplo_autofit">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">Hola AutoFit</div>
+    </div>
+    <h2>Auto-fit con minmax</h2>
+    <div class="container ejemplo_autofit_minmax">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">Hola AutoFit</div>
+    </div>
+
+</body>
+
+</html>
